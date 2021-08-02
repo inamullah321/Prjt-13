@@ -16,10 +16,10 @@ path.addImage(pathImg);
 path.velocity=5;
 path.scale=1.2;
 
-leftBoundry=createSprite(0,300,80,400);
-rightBoudry=createSprite(380,300,80,400);
-leftBoundry.visible=false;
-rightBoudry.visible=false;
+leftBoundary=createSprite(0,300,80,400);
+rightBoudary=createSprite(380,300,80,400);
+leftBoundary.visible=false;
+rightBoudary.visible=false;
 
 boy=createSprite(180,340,50,170);
 boy.addAnimation(jackImg)
@@ -27,13 +27,13 @@ boy.addAnimation(jackImg)
 
 function draw() {
   background(blue);
-  boy.x=world.mouseX
+  boy.x=World.mouseX
 
   if(path.y > 400){
     path.y=height/2;
   }
 boy.collide(leftBondary);
-boy.collide(rightBoudry);
+boy.collide(rightBoudary);
 edges=createEdgeSprites();
 boy.collide(edges[3]);
 drawSprites();
